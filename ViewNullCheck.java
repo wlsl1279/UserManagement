@@ -17,9 +17,9 @@ public class ViewNullCheck {
 	public boolean nullChecked(){
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sakila","root","jes23mine");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sakila","root","wz78933");
 			stmt = conn.createStatement();
-			rs = stmt.executeQuery("SELECT noteContent FROM note");
+			rs = stmt.executeQuery("SELECT note FROM note");
 			if(rs.next()){
 				nullChecked = true;
 			}
