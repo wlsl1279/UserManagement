@@ -19,7 +19,7 @@
 		   
 		   <script>
 		   alert("삭제되었습니다.");
-		   location.href="OutputDeleteSchedule.jsp";
+		   location.href="OutputDeletePhonebook.jsp";
 		   </script>
 		
 <%
