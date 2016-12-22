@@ -13,7 +13,7 @@
 
 <body>
 <%
-session.setMaxInactiveInterval(100 * 60); // 초 단위
+	session.setMaxInactiveInterval(100 * 60); // 초 단위
 	String idstore = request.getParameter("idcheck");
 
 	Connection conn = null;
