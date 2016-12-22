@@ -8,7 +8,7 @@
  try{
    Class.forName("com.mysql.jdbc.Driver");
    String url = "jdbc:mysql://localhost:3306/sakila";
-  Connection con = DriverManager.getConnection(url,"root","!asdf1234");
+  Connection con = DriverManager.getConnection(url,"root","wz789333");
   Statement stat = con.createStatement(); 
 
   String query = "DELETE FROM note where Note ='" + request.getParameter("del")+"'";
