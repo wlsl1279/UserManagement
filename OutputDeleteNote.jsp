@@ -14,15 +14,15 @@
 <%
 
   response.setContentType("text/html;charset=euc-kr;");
-   request.setCharacterEncoding("euc-kr");     //charset, Encoding ¼³Á¤
+   request.setCharacterEncoding("euc-kr");     //charset, Encoding ì„¤ì •
 
   Class.forName("com.mysql.jdbc.Driver");    // load the drive
    String DB_URL = 
            "jdbc:mysql://localhost:3306/sakila";
-                  // ÁÖÀÇ : test by changing mydb to name that you make
+                  // ì£¼ì˜ : test by changing mydb to name that you make
 
   String DB_USER = "root";
-  String DB_PASSWORD= "wz789333";
+  String DB_PASSWORD= "!asdf1234";
 
   Connection conn= null;
   Statement stmt = null;
@@ -33,7 +33,7 @@
        conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
        stmt = conn.createStatement();
 
-       String query = "SELECT note FROM note";
+       String query = "SELECT note, notePageNumber FROM note";
        rs = stmt.executeQuery(query);
   %>
 <div class = "login-wrap">
@@ -45,14 +45,27 @@
  <table border="1" cellspacing="0">
  <tr>
  <td>Note</td>
- <th>ºñ°í</th>
+ <td>Notepagenumber</td>
+ <th>ë¹„ê³ </th>
  </tr>
-<%
-     while(rs.next()) { //rs ¸¦ ÅëÇØ Å×ÀÌºí °´Ã¼µéÀÇ ÇÊµå°ªÀ» ³Ñ°Üº¼ ¼ö ÀÖ´Ù.
+ <%
+if(!rs.next()){
+    %>
+    <script>
+    alert("ë…¸íŠ¸ì— ì…ë ¥ëœ ë‚´ìš©ì´ ì—†ìŠµë‹ˆë‹¤");
+    history.go(-1);
+    </script>
+    
+    <%
+ }
+ rs.beforeFirst();
+
+while(rs.next()) { //rs ë¥¼ í†µí•´ í…Œì´ë¸” ê°ì²´ë“¤ì˜ í•„ë“œê°’ì„ ë„˜ê²¨ë³¼ ìˆ˜ ìˆë‹¤.
 %><tr>
  <td><%=rs.getString(1)%></td>
+ <td><%=rs.getString(2)%></td>
 
- <td><a href="DeleteNote.jsp?del=<%=rs.getString(1)%>">»èÁ¦</a>
+ <td><a href="DeleteNote.jsp?del=<%=rs.getString(1)%>">ì‚­ì œ</a>
  </td>
  </tr>
 <%
