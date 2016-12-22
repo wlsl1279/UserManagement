@@ -1,0 +1,109 @@
+/* �ʱ�ȭ */
+   *{margin: 0 auto; padding: 0; color:white;}
+   body{font-family: '��������';}
+   li{list-style: none;}
+   a{text-decoration: none;}
+   img{border: 0; float: left;}
+html {
+  background: black;
+  font-family: 'Helvetica Neue', Arial, Sans-Serif;
+}
+   /* ���� */
+   #hea {
+      width: 960px; margin: 20px auto;
+      height: 150px;
+      position: relative;
+      
+   }
+   #hea > #title {
+      position: absolute;
+      left: 30px; top: 30px;
+      
+   }
+   #hea > #nav {
+      position: absolute;
+      right: 0; left: 20; bottom: -50px;
+   }
+
+      /* �޴� */
+   #nav > ul {overflow: hidden;}
+   #nav > ul > li {float: left;}
+   #nav > ul > li > a {
+      color: white;
+      display: block;
+      padding: 10px 25px;
+      border: 2px solid white;
+   
+   }
+   #nav > ul > li > a:hover {
+      color: white;
+      background: black;
+   }
+   
+   
+#content{
+
+    width: 1250px;margin:0 auto;
+    overflow: hidden;
+   margin:  80px 50px;
+    margin-bottom: 10px;
+}
+html . input {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  cursor: pointer;
+  visibility: none;
+  transition: box-shadow .4s ease;
+}
+button {
+  vertical-align: middle;
+  width: 60px;
+  height: 20px;
+  border-radius: 5px;
+  outline: 0;
+  -moz-outline-style: none;
+  background: #e74c3c;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: box-shadow .4s ease;
+}
+button:hover {
+  box-shadow: 1px 1px 5px #555;
+}
+button:active {
+  box-shadow: 1px 1px 7px #222;
+}
+
+button > a {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: box-shadow .4s ease;
+}
+#key{
+   color: black;
+   
+}
+#key > option{
+   color: black;
+   
+}
+#search{
+   color: black;
+}
+#t{
+   position: absolute;
+     margin: 0 auto; left: 100;top: 200px;
+}
+#thetext{
+   color:black;
+}
