@@ -7,7 +7,7 @@
 <style>
 .changesImgOnHover {
 	display: inline-block; /* or just block */
-	background-image: url('image/phonebook.png');//바뀌는 이미지
+	background-image: url('image/phonebook.png');
 	no-repeat;
 }
 
@@ -42,7 +42,17 @@
 <title>software engineering</title>
 </head>
 <body>
-
+<% 
+	String userID = (String)session.getAttribute("userID");  
+	if(userID == null){
+		   %>
+		   <script> 
+			   alert("접근하려면 로그인하세요"); 
+			   location.href="LoginIndex.jsp";
+		   </script>
+		   <%
+		}
+%>
 	<header id="hea"> <hgroup id="title">
 	<img src = "image\usermanagement.png"/></a>
 	</br>
@@ -61,7 +71,7 @@
 			<tr>
 
 				<td align="center" valign="top"><a href="phonebook.jsp"
-					class="changesImgOnHover"><img id="img" src="image\blackphonebook.jpg"//바뀌기전
+					class="changesImgOnHover"><img id="img" src="image\blackphonebook.jpg"
 						width="330" height="300" border="10" /></a>
 						<br /> Phone book<br />
 						

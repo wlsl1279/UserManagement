@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+</head>
 <style>
 .changesImgOnHover {
    display: inline-block; /* or just block */
@@ -31,14 +38,10 @@
 
 
 </style>
-
 <link rel=stylesheet href="main.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>software engineering</title>
 </head>
-
-
-
 <body>
 
    <header id="hea"> <hgroup id="title">
@@ -64,14 +67,14 @@
                   
             </td>
 
-            <td align="center" valign="top"><a href="ViewPhonebook.jsp"
+            <td align="center" valign="top"><a href="OutputViewPhonebook.jsp"
                class="changesImgOnHover2"><img src="image\blackview.jpg" 
                   width="300" height="300" border="10" /></a>
                   <br /> ViewPhonebook<br />
                   
             </td>
 
-            <td align="center" valign="top"><a href="DeletePhonebook.jsp"
+            <td align="center" valign="top"><a href="OutputDeletePhonebook.jsp"
                class="changesImgOnHover3"><img src="image\blackminus.jpg"
                   width="300" height="300" border="10" /></a>
                   <br /> DeletePhonebook<br />

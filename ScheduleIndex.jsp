@@ -67,14 +67,14 @@
                   
             </td>
 
-            <td align="center" valign="top"><a href="Schedule.jsp"
+            <td align="center" valign="top"><a href="OutputViewSchedule.jsp"
                class="changesImgOnHover2"><img src="image\blackview.jpg" 
                   width="300" height="300" border="10" /></a>
                   <br /> ViewSchedule<br />
                   
             </td>
 
-            <td align="center" valign="top"><a href="DeleteSchedule.jsp"
+            <td align="center" valign="top"><a href="OutputDeleteSchedule.jsp"
                class="changesImgOnHover3"><img src="image\blackminus.jpg"
                   width="300" height="300" border="10" /></a>
                   <br /> DeleteSchedule<br />

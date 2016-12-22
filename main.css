@@ -1,6 +1,6 @@
-/* ÃÊ±âÈ­ */
+/* ï¿½Ê±ï¿½È­ */
    *{margin: 0 auto; padding: 0; color:white;}
-   body{font-family: '¸¼Àº°íµñ';}
+   body{font-family: 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';}
    li{list-style: none;}
    a{text-decoration: none;}
    img{border: 0; float: left;}
@@ -8,7 +8,7 @@ html {
   background: black;
   font-family: 'Helvetica Neue', Arial, Sans-Serif;
 }
-   /* Çì´õ */
+   /* ï¿½ï¿½ï¿½ */
    #hea {
       width: 960px; margin: 20px auto;
       height: 150px;
@@ -25,7 +25,7 @@ html {
       right: 0; left: 20; bottom: -50px;
    }
 
-      /* ¸Þ´º */
+      /* ï¿½Þ´ï¿½ */
    #nav > ul {overflow: hidden;}
    #nav > ul > li {float: left;}
    #nav > ul > li > a {
@@ -49,10 +49,10 @@ html {
     margin-bottom: 10px;
 }
 html . input {
-  background: #e74c3c;
+  background: white;
   border: none;
-  color: white;
-  font-size: 18px;
+  color: black;
+  font-size: px;
   font-weight: 200;
   cursor: pointer;
   visibility: none;

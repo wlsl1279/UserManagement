@@ -67,14 +67,14 @@
                   
             </td>
 
-            <td align="center" valign="top"><a href="ViewNote.jsp"
+            <td align="center" valign="top"><a href="OutputViewNote.jsp"
                class="changesImgOnHover2"><img src="image\blackview.jpg" 
                   width="300" height="300" border="10" /></a>
                   <br /> ViewNote<br />
                   
             </td>
 
-            <td align="center" valign="top"><a href="DeleteNote.jsp"
+            <td align="center" valign="top"><a href="OutputDeleteNote.jsp"
                class="changesImgOnHover3"><img src="image\blackminus.jpg"
                   width="300" height="300" border="10" /></a>
                   <br /> DeleteNote<br />
