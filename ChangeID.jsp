@@ -25,8 +25,7 @@
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID<br/>
   <input type="text" name="id" size="15" value="<%=sessionID%>"><br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password<br/>
-  <input type="password" name="password" size="10" value="<%=sessionPassword%>"><br/>
+
   <button type="submit">Change</button>
 
 </form>
