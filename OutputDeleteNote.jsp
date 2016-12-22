@@ -33,7 +33,7 @@
        conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
        stmt = conn.createStatement();
 
-       String query = "SELECT note, notePageNumber FROM note";
+       String query = "SELECT note FROM note";
        rs = stmt.executeQuery(query);
   %>
 <div class = "login-wrap">
@@ -45,7 +45,6 @@
  <table border="1" cellspacing="0">
  <tr>
  <td>Note</td>
- <td>Notepagenumber</td>
  <th>비고</th>
  </tr>
  <%
@@ -63,9 +62,7 @@ if(!rs.next()){
 while(rs.next()) { //rs 를 통해 테이블 객체들의 필드값을 넘겨볼 수 있다.
 %><tr>
  <td><%=rs.getString(1)%></td>
- <td><%=rs.getString(2)%></td>
-
- <td><a href="DeleteNote.jsp?del=<%=rs.getString(1)%>">삭제</a>
+  <td><a href="DeleteNote.jsp?del=<%=rs.getString(1)%>">삭제</a>
  </td>
  </tr>
 <%
