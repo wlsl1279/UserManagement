@@ -22,7 +22,7 @@
                   // 주의 : test by changing mydb to name that you make
 
   String DB_USER = "root";
-  String DB_PASSWORD= "!asdf1234";
+  String DB_PASSWORD= "wz789333";
 
   Connection conn= null;
   Statement stmt = null;
