@@ -14,15 +14,15 @@
 <%
 
   response.setContentType("text/html;charset=euc-kr;");
-   request.setCharacterEncoding("euc-kr");     //charset, Encoding Ό³Α¤
+   request.setCharacterEncoding("euc-kr");     //charset, Encoding μ„¤μ •
 
   Class.forName("com.mysql.jdbc.Driver");    // load the drive
    String DB_URL = 
            "jdbc:mysql://localhost:3306/sakila";
-                  // ΑΦΐΗ : test by changing mydb to name that you make
+                  // μ£Όμ : test by changing mydb to name that you make
 
   String DB_USER = "root";
-  String DB_PASSWORD= "wz789333";
+  String DB_PASSWORD= "!asdf1234";
 
   Connection conn= null;
   Statement stmt = null;
@@ -46,15 +46,25 @@
  <tr>
  <td>Date</td>
  <td>Description</td>
- <th>Ίρ°ν</th>
+ <th>λΉ„κ³ </th>
  </tr>
-<%
-     while(rs.next()) { //rs Έ¦ ΕλΗΨ ΕΧΐΜΊν °΄ΓΌµιΐΗ ΗΚµε°ªΐ» ³Ρ°άΊΌ Όφ ΐΦ΄Ω.
+ <%
+if(!rs.next()){
+    %>
+    <script>
+    alert("λ…ΈνΈμ— μ…λ ¥λ λ‚΄μ©μ΄ μ—†μµλ‹λ‹¤");
+    history.go(-1);
+    </script>
+    
+    <%
+ }
+ rs.beforeFirst();
+ while(rs.next()) { //rs λ¥Ό ν†µν•΄ ν…μ΄λΈ” κ°μ²΄λ“¤μ ν•„λ“κ°’μ„ λ„κ²¨λ³Ό μ μλ‹¤.
 %><tr>
  <td><%=rs.getString(1)%></td>
  <td><%=rs.getString(2)%></td>
 
- <td><a href="DeleteSchedule.jsp?del=<%=rs.getString(1)%>">»θΑ¦</a>
+ <td><a href="DeleteSchedule.jsp?del=<%=rs.getString(1)%>">μ‚­μ </a>
  </td>
  </tr>
 <%
