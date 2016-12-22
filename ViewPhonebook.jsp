@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=utf-8" import="java.sql.*" %>
+<%@ page contentType="text/html;charset=utf-8" import="java.sql.*"%>
 
 <%
 	request.setCharacterEncoding("utf-8");
@@ -10,34 +10,31 @@
 	                  // 주의 : test by changing mydb to name that you make
 
 	  String DB_USER = "root";
-	  String DB_PASSWORD= "jes23mine";
+	  String DB_PASSWORD= "wz789333";
 
-	  Connection conn= null;
+	  Connection con= null;
 	  Statement stmt = null;
 	  ResultSet rs   = null;
 	
 	
 		try{
 		  Class.forName("com.mysql.jdbc.Driver");
-		  String url = "jdbc:mysql://localhost:3306/sakila";
-		  Connection con = DriverManager.getConnection(url,"root","jes23mine");
-		  Statement stat = con.createStatement(); 
+		  con = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+	      stmt = con.createStatement();
 		  
-		  conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-	       stmt = conn.createStatement();
-		  
-		  String query = "SELECT name,phonenumber FROM phonebook where name ='" + request.getParameter("show")+"'";
+		  String query = "SELECT name,number FROM phonebook where name ='" + request.getParameter("show")+"'";
 		 
 		  rs = stmt.executeQuery(query);
 		  
 		  %>
-		  <script>
+<script>
 		  alert('<%=rs.getString(1)%>');
-		  location.href="OutputSchedule.jsp";
+		  location.href="OutputViewSchedule.jsp";
 		  </script>
-		  <%
+<%
 		  
-		  stat.close();
+		  rs.close();
+		  stmt.close();
 		  con.close();
 		  
 		}
