@@ -18,6 +18,6 @@ try{
   catch(Exception e){
    out.println( e );
   }
-  response.sendRedirect("ViewNote.jsp"); 
+  response.sendRedirect("NoteIndex.jsp"); 
 %>
 

@@ -18,6 +18,6 @@ try{
   catch(Exception e){
    out.println( e );
   }
-  response.sendRedirect("ViewSchedule.jsp"); 
+  response.sendRedirect("ScheduleIndex.jsp"); 
 %>
 

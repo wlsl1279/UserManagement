@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=utf-8" import="java.sql.*" %>
+<%@ page contentType="text/html;charset=utf-8" import="java.sql.*"%>
 <%
 request.setCharacterEncoding("utf-8"); //Set encoding
 String name = request.getParameter("name");
@@ -11,21 +11,21 @@ try{
 	Connection con = DriverManager.getConnection(url,"root","wz789333");
 	Statement stat = con.createStatement();
 	String query = "INSERT INTO phonebook(name, number) VALUES('"+name+"','"+number+"')";
-	String queryForDoubleCheck = "SELECT name, number FROM phonebook";
-	rs = stat.executeQuery(queryForDoubleCheck);
+	String queryForDuplicateCheck = "SELECT name, number FROM phonebook";
+	rs = stat.executeQuery(queryForDuplicateCheck);
 	while (rs.next()){
 		if ( rs.getString(1).equals(name) && rs.getString(2).equals(number)){
 			%>
-			<script> alert("이미 저장된 주소록입니다."); </script>
-			<meta http-equiv=refresh content="0;url=CreatePhonebook.jsp">
-			<%
+<script> alert("이미 저장된 주소록입니다."); </script>
+<meta http-equiv=refresh content="0;url=CreatePhonebook.jsp">
+<%
 			
 		}else{
 			stat.executeUpdate(query);
 			rs.close();
 		    stat.close();
 		    con.close();
-		    response.sendRedirect("ViewPhonebook.jsp"); 
+		    response.sendRedirect("PhonebookIndex.jsp"); 
 		}
 	}
 }catch(Exception e){
