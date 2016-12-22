@@ -11,7 +11,7 @@ public class LoginCheck  {
    Statement stat = null;
    String url = "jdbc:mysql://localhost:3306/sakila";        
    String dbuser = "root";                                       
-   String dbpassword = "630910han"; 
+   String dbpassword = "wz789333"; 
    ResultSet rs = null;
    
    public boolean testLoginCheck(String id, String password) {
