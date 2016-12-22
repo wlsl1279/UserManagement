@@ -23,20 +23,18 @@
    String dbuser = "root";                                       
    String dbpassword = "630910han"; 
       
-   String formId = request.getParameter("id");
-   String formPassword = request.getParameter("password");
-   String sessionID = (String)session.getAttribute("userID");
-   String sessionPassword = (String)session.getAttribute("userPassword");
-	
-
+   String formId = (String)request.getParameter("id");
+   String sessionID = (String)session.getAttribute("userID").toString();
    
+   if(formId.equals(sessionID)) {
+       %> <script> alert("기존 정보와 동일합니다."); history.go(-1); </script> <%            
+   } 
    try{
       Class.forName("com.mysql.jdbc.Driver");            
       conn=DriverManager.getConnection(url,dbuser,dbpassword);
-      String sql = "UPDATE information SET id=?, password=? WHERE no=1"; 
+      String sql = "UPDATE information SET id=? WHERE no=1"; 
       pstmt = conn.prepareStatement(sql);
       pstmt.setString(1,formId);
-      pstmt.setString(2,formPassword);
       pstmt.executeUpdate();
       %>
       <div class = "login-wrap"> 
@@ -45,7 +43,7 @@
      <%
       if(sessionID != null){
          %>
-         <button><a href="login.jsp">back to Login</a></button>
+         <button><a href="LoginIndex.jsp">back to Login</a></button>
          <%
       }
    }catch(SQLException e){
@@ -53,7 +51,7 @@
    }finally{
       if(pstmt != null) try{pstmt.close();}catch(SQLException sqle){} 
       if(conn != null) try{conn.close();}catch(SQLException sqle){}   
-   	}   
+   	} 
 
 %>
 </div>
