@@ -14,15 +14,15 @@
 <%
 
   response.setContentType("text/html;charset=euc-kr;");
-   request.setCharacterEncoding("euc-kr");     //charset, Encoding ����
+   request.setCharacterEncoding("euc-kr");     //charset, Encoding 설정
 
   Class.forName("com.mysql.jdbc.Driver");    // load the drive
    String DB_URL = 
            "jdbc:mysql://localhost:3306/sakila";
-                  // ���� : test by changing mydb to name that you make
+                  // 주의 : test by changing mydb to name that you make
 
   String DB_USER = "root";
-  String DB_PASSWORD= "wz789333";
+  String DB_PASSWORD= "!asdf1234";
 
   Connection conn= null;
   Statement stmt = null;
@@ -49,15 +49,26 @@
  <tr>
  <td>Name</td>
  <td>number</td>
- <th>���</th>
+ <th>비고</th>
  </tr>
 <%
-     while(rs.next()) { //rs �� ���� ���̺� ��ü���� �ʵ尪�� �Ѱܺ� �� �ִ�.
-%><tr>
+if(!rs.next()){
+    %>
+    <script>
+    alert("저장된 주소록이 없습니다");
+    history.go(-1);
+    </script>
+    
+    <%
+ }
+ rs.beforeFirst();
+ while(rs.next()) { //rs 를 통해 테이블 객체들의 필드값을 넘겨볼 수 있다.
+ %>
+<tr>
  <td><%=rs.getString(1)%></td>
  <td><%=rs.getString(2)%></td>
 
- <td><a href="DeletePhonebook.jsp?del=<%=rs.getString(1)%>">����</a>
+ <td><a href="DeletePhonebook.jsp?del=<%=rs.getString(1)%>">삭제</a>
  </td>
  </tr>
 <%
