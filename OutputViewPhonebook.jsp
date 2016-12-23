@@ -16,7 +16,7 @@
 
 	Class.forName("com.mysql.jdbc.Driver");
 	String DB_URL = "jdbc:mysql://localhost:3306/sakila";
-	// ¡÷¿« : test by changing mydb to name that you make
+	// Ï£ºÏùò : test by changing mydb to name that you make
 
 	String DB_USER = "root";
 	String DB_PASSWORD = "wz789333";
@@ -42,16 +42,26 @@
 				<tr>
 					<td>name</td>
 					<td>number</td>
-					<th>∫Ò∞Ì</th>
+					<th>ÎπÑÍ≥†</th>
 				</tr>
 				<%
-					while (rs.next()) { //rs ∏¶ ≈Î«ÿ ≈◊¿Ã∫Ì ∞¥√ºµÈ¿« « µÂ∞™¿ª ≥—∞‹∫º ºˆ ¿÷¥Ÿ.
+					if(!rs.next()){
+					%>
+						<script>
+						alert("Îç∞Ïù¥ÌÑ∞Í∞Ä ÏóÜÏäµÎãàÎã§");
+						history.go(-1);
+						</script>
+					
+					<%
+					}
+					rs.beforeFirst();
+					while (rs.next()) { //rs Î•º ÌÜµÌï¥ ÌÖåÏù¥Î∏î Í∞ùÏ≤¥Îì§Ïùò ÌïÑÎìúÍ∞íÏùÑ ÎÑòÍ≤®Î≥º Ïàò ÏûàÎã§.
 				%>
 					<tr>
 					<td><%=rs.getString(1)%></td>
 					<td><%=rs.getString(2)%></td>
 
-					<td><a href="ViewPhonebook.jsp?show=<%=rs.getString(1)%>">∫∏±‚</a>
+					<td><a href="ViewPhonebook.jsp?show=<%=rs.getString(1)%>">Î≥¥Í∏∞</a>
 					</td>
 				</tr>
 
