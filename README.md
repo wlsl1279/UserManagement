@@ -8,9 +8,10 @@ DataBase
 1. default value - first put this value into database and start
    id : admin VARCHAR
    password : rhksflwk VARCHAR
-   
-2.
-
+   
+2. schedule :
+date DATE
+description STRING(30)
 
 3. phonebook : 
    name    VARCHAR(4)
