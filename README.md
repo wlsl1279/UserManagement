@@ -5,9 +5,10 @@ DB_PASSWORD :
 DataBase
 
 
-1.
-
-
+1. default value - first put this value into database and start
+   id : admin VARCHAR
+   password : rhksflwk VARCHAR
+   
 2.
 
 
