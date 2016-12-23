@@ -42,7 +42,6 @@
 				<tr>
 					<td>name</td>
 					<td>number</td>
-					<th>비고</th>
 				</tr>
 				<%
 					if(!rs.next()){
@@ -60,9 +59,7 @@
 					<tr>
 					<td><%=rs.getString(1)%></td>
 					<td><%=rs.getString(2)%></td>
-
-					<td><a href="ViewPhonebook.jsp?show=<%=rs.getString(1)%>">보기</a>
-					</td>
+				
 				</tr>
 
 				<%
