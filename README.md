@@ -1,4 +1,4 @@
-DB_URL : 
+DB_URL : jdbc:mysql://localhost:3306/sakila
 DB_USER : root
 DB_PASSWORD : wz789333
 
