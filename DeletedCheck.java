@@ -16,7 +16,7 @@ public class DeletedCheck {
 		Statement stat = null;
 		String url = "jdbc:mysql://localhost:3306/sakila";
 		String id = "root";
-		String password = "!asdf1234";
+		String password = "wz789333";
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(url, id, password);
