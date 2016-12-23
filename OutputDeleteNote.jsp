@@ -22,7 +22,7 @@
                   // 주의 : test by changing mydb to name that you make
 
   String DB_USER = "root";
-  String DB_PASSWORD= "wz789333";
+  String DB_PASSWORD= "!asdf1234";
 
   Connection conn= null;
   Statement stmt = null;
@@ -45,6 +45,7 @@
  <table border="1" cellspacing="0">
  <tr>
  <td>Note</td>
+ 
  <th>비고</th>
  </tr>
  <%
@@ -62,7 +63,8 @@ if(!rs.next()){
 while(rs.next()) { //rs 를 통해 테이블 객체들의 필드값을 넘겨볼 수 있다.
 %><tr>
  <td><%=rs.getString(1)%></td>
-  <td><a href="DeleteNote.jsp?del=<%=rs.getString(1)%>">삭제</a>
+ 
+ <td><a href="DeleteNote.jsp?del=<%=rs.getString(1)%>">삭제</a>
  </td>
  </tr>
 <%
