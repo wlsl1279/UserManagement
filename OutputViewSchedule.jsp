@@ -41,7 +41,6 @@
 				<tr>
 					<td>date</td>
 					<td>description</td>
-					<th>비고</th>
 				</tr>
 				<%
 					if(!rs.next()){
@@ -59,8 +58,6 @@
 					<td><%=rs.getString(1)%></td>
 					<td><%=rs.getString(2)%></td>
 
-					<td><a href="ViewSchedule.jsp?show=<%=rs.getString(1)%>">보기</a>
-					</td>
 				</tr>
 
 				<%
