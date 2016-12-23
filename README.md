@@ -1,6 +1,6 @@
 DB_URL : 
-DB_USER : 
-DB_PASSWORD : 
+DB_USER : root
+DB_PASSWORD : wz789333
 
 DataBase
 
@@ -10,8 +10,8 @@ DataBase
    password : rhksflwk VARCHAR
    
 2. schedule :
-date DATE
-description STRING(30)
+   date DATE
+   description STRING(30)
 
 3. phonebook : 
    name    VARCHAR(4)
